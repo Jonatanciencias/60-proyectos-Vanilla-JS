@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+:root {  
+  --color-principal: #234078;  
+  --color-decoracion: #d19c1d;  
+  --color-oscuro: #070707;  
+  --color-claro: #e1e1e1;  
+  --gris: #323232;  
+  --gris-transparente: rgba(50, 50, 50, 0.4);
+  }
+
+/* Universal Reset CSS */
+
+/* Remove default margin and padding */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set box-sizing to border-box */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default anchor styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove default button styles */
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Add a base font size and line height */
+body {
+  background-color: var(--color-principal);
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  color: var(--color-claro);
+
+}
+
+.container {
+  width: 70vh;
+  height: 50vh;
+  margin: 0 auto;
+  padding: 1rem;
+  background: var(--gris-transparente);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(9, 10, 20, 0.05);
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+label {
+  font-size: 1rem;
+}
+
+input {
+  width: 60%;
+  padding: 0.3rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(9, 10, 20, 0.05);
+  background-color: var(--gris-transparente);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  color: var(--color-claro);
+  text-align: center;
+}
+
+/* Add any additional CSS rules here */
+
+#result {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-decoracion);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5rem;
+}
+
+button#calculate {
+  background-color: var(--color-principal);
+  color: var(--color-claro);
+  padding: 0.5rem 0.8rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+button#calculate:hover {
+  background-color: var(--color-decoracion);
+  color: var(--color-oscuro);
+  font-weight: bold;
+}
+
+
+/* Add any additional CSS rules here */
+
+#grandma {
+  width: 35%;
+  height: auto;
+  position: absolute;
+  top: 60%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+#grandma:hover {
+  transform: translate(-50%, -50%) rotate(5deg);
+}
+
+
