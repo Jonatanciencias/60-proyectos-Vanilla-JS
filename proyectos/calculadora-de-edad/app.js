@@ -2,7 +2,6 @@ const calculate = document.getElementById('calculate');
 const birthday = document.getElementById('birthday');
 
 
-
 function calculateAge() {
   const birthdayValue = birthday.value;
   if (birthdayValue === '') {
