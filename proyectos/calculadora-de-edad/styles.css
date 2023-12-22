@@ -118,7 +118,7 @@ button#btnCalculate {
   background-color: var(--color-principal);
   color: var(--color-claro);
   padding: 0.5rem 0.8rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   border-radius: 2rem;
   border: none;
   font-size: 0.8rem;
@@ -150,4 +150,13 @@ button#btnCalculate:hover {
   transform: translate(-50%, -50%) rotate(5deg);
 }
 
-
+#outputEl {
+  width: 200px;
+  height: 40px;
+  font-size: 1.3rem;
+  margin-top: 0.6rem;
+  font-weight: bold;
+  color: var(--color-decoracion);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5rem;
+}
