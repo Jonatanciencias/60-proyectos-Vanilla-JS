@@ -14,6 +14,7 @@ Cornell Note:
     - evaluates if:
       - the birthday month is less than the current month.
       - the birthday month is equal to the current month but the birthday day is less than the current day.
+    5. link the outputEl in a const.
 - Questions:
   - how constructor works?
   - how Date() works? , what parameters receives and what returns?
@@ -23,35 +24,41 @@ Cornell Note:
 - Summary:
 */
 
+const btnCalculate = document.getElementById('btnCalculate');
+const inputBirthday = document.getElementById('inputBirthday');
+const outputEl = document.getElementById('outputEl');
 
-const calculate = document.getElementById('calculate');
-const birthday = document.getElementById('birthday');
-
+let month = 0;
+let day = 0;
 
 function calculateAge() {
-  const birthdayValue = birthday.value;
+  // console.log('click');
+  const birthdayValue = inputBirthday.value;
+  // console.log(birthdayValue);
   if (birthdayValue === '') {
-    alert('Debes ingresar una fecha de nacimiento');
+    alert('Please enter your birthday');
   } else {
     const age = getAge(birthdayValue);
-    console.log(age);
+    // console.log(age);
+    outputEl.innerHTML = `Tu edad es ${age} años.`;
   }
 }
 
 function getAge(birthdayValue) {
   const currentDate = new Date();
   const birthdayDate = new Date(birthdayValue);
-  let age = currentDate.getFullYear() - birthdayDate.getFullYear();
-  let month = birthdayDate.getMonth() - currentDate.getMonth();
 
-  if (month < 0 || (month === 0 && currentDate.getDate() > birthdayDate.getDate())) {
-    age--; 
-    console.log('Tu cumpleaños aún no ha llegado');
-  } 
-  
+  let age = currentDate.getFullYear() - birthdayDate.getFullYear();
+  // console.log(age);
+  const month = currentDate.getMonth() - birthdayDate.getMonth();
+  // console.log(month);
+
+  if (month < 0 || (month === 0 && currentDate.getDate() < birthdayDate.getDate())) {
+    age--;
+  }
+
   return age;
 }
 
+btnCalculate.addEventListener('click', calculateAge);
 
-
-calculate.addEventListener('click', calculateAge);
