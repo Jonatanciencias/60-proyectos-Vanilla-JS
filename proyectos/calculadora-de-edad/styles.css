@@ -1,3 +1,12 @@
+/*
+Cornell Note:
+- Notes: 
+- Questions:
+  - how to make the grandma image responsive?
+  - how to reorganize the elements when the screen is smaller?
+- Summary:
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 :root {  
@@ -31,14 +40,6 @@ ul, ol {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-/* Remove default button styles */
-button {
-  border: none;
-  background: none;
-  padding: 0;
-  cursor: pointer;
 }
 
 /* Add a base font size and line height */
@@ -113,22 +114,22 @@ input {
   margin-bottom: 0.5rem;
 }
 
-button#calculate {
+button#btnCalculate {
   background-color: var(--color-principal);
   color: var(--color-claro);
   padding: 0.5rem 0.8rem;
   margin-top: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   border: none;
   font-size: 0.8rem;
-  transition: background-color 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   cursor: pointer;
+  max-width: 5rem;
 }
 
-button#calculate:hover {
+button#btnCalculate:hover {
   background-color: var(--color-decoracion);
   color: var(--color-oscuro);
-  font-weight: bold;
 }
 
 
