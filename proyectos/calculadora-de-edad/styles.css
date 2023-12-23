@@ -1,3 +1,5 @@
+/* FILEPATH: /c:/Users/Jonnattan Garcia/Downloads/Mis Documentos/Recursos_proyectos/60 proyectos Vanilla JS/proyectos/calculadora-de-edad/styles.css */
+
 /*
 Cornell Note:
 - Notes: 
@@ -7,8 +9,10 @@ Cornell Note:
 - Summary:
 */
 
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+/* Define CSS variables */
 :root {  
   --color-principal: #234078;  
   --color-decoracion: #d19c1d;  
@@ -16,7 +20,7 @@ Cornell Note:
   --color-claro: #e1e1e1;  
   --gris: #323232;  
   --gris-transparente: rgba(50, 50, 50, 0.4);
-  }
+}
 
 /* Universal Reset CSS */
 
@@ -54,9 +58,9 @@ body {
   text-align: center;
   align-items: center;
   color: var(--color-claro);
-
 }
 
+/* Container styles */
 .container {
   width: 70vh;
   height: 50vh;
@@ -74,11 +78,13 @@ body {
   flex-direction: column;
 }
 
+/* Heading styles */
 h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
+/* Form styles */
 .form {
   display: flex;
   flex-direction: column;
@@ -88,10 +94,12 @@ h1 {
   z-index: 2;
 }
 
+/* Label styles */
 label {
   font-size: 1rem;
 }
 
+/* Input styles */
 input {
   width: 60%;
   padding: 0.3rem;
@@ -104,8 +112,7 @@ input {
   text-align: center;
 }
 
-/* Add any additional CSS rules here */
-
+/* Result styles */
 #result {
   font-size: 1.3rem;
   font-weight: bold;
@@ -114,6 +121,7 @@ input {
   margin-bottom: 0.5rem;
 }
 
+/* Calculate button styles */
 button#btnCalculate {
   background-color: var(--color-principal);
   color: var(--color-claro);
@@ -132,9 +140,7 @@ button#btnCalculate:hover {
   color: var(--color-oscuro);
 }
 
-
-/* Add any additional CSS rules here */
-
+/* Grandma image styles */
 #grandma {
   width: 35%;
   height: auto;
@@ -146,10 +152,25 @@ button#btnCalculate:hover {
   transition: transform 0.3s ease-in-out;
 }
 
+/* Animation for the hover effect */
 #grandma:hover {
-  transform: translate(-50%, -50%) rotate(5deg);
+  transform: translate(-50%, -50%) rotate(5deg) scale(1.02);
+  animation: swing 1s ease-in-out infinite;
 }
 
+@keyframes swing {
+  0% {
+    transform: translate(-50%, -50%) rotate(5deg) scale(1.02);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-5deg) scale(1.02);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(5deg) scale(1.02);
+  }
+}
+
+/* Output element styles */
 #outputEl {
   width: 200px;
   height: 40px;
