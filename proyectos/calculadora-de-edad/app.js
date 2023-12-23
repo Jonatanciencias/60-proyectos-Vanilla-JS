@@ -68,6 +68,7 @@ const outputEl = document.getElementById('outputEl');
  * Calculates the age based on the provided birthday value.
  */
 function calculateAge() {
+  outputEl.innerHTML = ''; // clear the output element
   const birthdayValue = inputBirthday.value;
 
   if (birthdayValue === '') {
