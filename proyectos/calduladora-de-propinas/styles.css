@@ -1,5 +1,27 @@
 /* Universal Reset CSS */
 
+/*
+Cornell Note:
+- Notes: 
+- Questions:
+  - how to make the grandma image responsive?
+  - how to reorganize the elements when the screen is smaller?
+- Summary:
+*/
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+/* Define CSS variables */
+:root {  
+  --color-principal: #234078;  
+  --color-decoracion: #d19c1d;  
+  --color-oscuro: #070707;  
+  --color-claro: #e1e1e1;  
+  --gris: #323232;  
+  --gris-transparente: rgba(50, 50, 50, 0.4);
+}
+
 /* Remove default margin and padding */
 * {
   margin: 0;
@@ -26,4 +48,10 @@ a {
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
+
+
