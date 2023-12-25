@@ -46,12 +46,21 @@ a {
 
 /* Set default font family and size */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Oswald, sans-serif;
   font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  background: url(assets/eD_blurred.png) no-repeat center center/cover;
 }
 
+.container {
+  padding: 5px;
+  width: 400px;
+  height: 200px;
+  background-color: var(--color-principal);
+  border-radius: 1em;
+}
 
