@@ -1,6 +1,8 @@
 ## 60 proyectos sencillos para practicar las bases de JavaScript
 
-- [ ] 1. Calculadora de edad.
+- [x] 1. Calculadora de edad.
+- [x] 2. Calculadora de propinas.
+- [ ] 3. App de recetas
 
 ### Recursos
 
