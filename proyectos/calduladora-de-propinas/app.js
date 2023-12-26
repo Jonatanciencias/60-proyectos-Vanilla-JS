@@ -12,25 +12,29 @@ Cornell Note:
       - Calculate the total multiplying the bill value by porcentage of the tip.
       - Print the total value in the total element (with two decimals)
       - Add a delay to the printing of the total value.
-  - 
 - Questions:
+  - How to add a delay to the printing of the total value?
+  - Why totalEl.textContent = ''; is needed?
 - Summary:
 */
 
-const btnEl  = document.getElementById('calculate');
-const billInput = document.getElementById('bill'); 
-const tipInput = document.getElementById('tip');
-const totalEl = document.getElementById('total');
 
-btnEl.addEventListener('click',  calculateTotal => {
+/**
+ * Calculates the total bill including tip and displays it with a typing effect.
+ * @param {Event} event - The click event object.
+ */
+const calculateTotal = (event) => {
   const billValue = billInput.value;
   const tipValue = tipInput.value;
-  const totalValue = billValue * (1 +  (tipValue / 100));
+  const totalValue = billValue * (1 + (tipValue / 100));
   const text = totalValue.toFixed(2);
 
   let i = 0;
-  const speed = 100; // velocidad de escritura en milisegundos
+  const speed = 100;
 
+  /**
+   * Types out the total value with a typing effect.
+   */
   function typeEffect() {
     if (i < text.length) {
       totalEl.textContent += text.charAt(i);
@@ -41,7 +45,17 @@ btnEl.addEventListener('click',  calculateTotal => {
 
   totalEl.textContent = '';
   typeEffect();
-})
+};
+
+// Get DOM elements
+const btnEl = document.getElementById('calculate');
+const billInput = document.getElementById('bill');
+const tipInput = document.getElementById('tip');
+const totalEl = document.getElementById('total');
+
+// Add event listener to calculate button
+btnEl.addEventListener('click', calculateTotal);
+
 
 
 
