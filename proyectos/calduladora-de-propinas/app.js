@@ -16,6 +16,11 @@ Cornell Note:
   - How to add a delay to the printing of the total value?
   - Why totalEl.textContent = ''; is needed?
 - Summary:
+
+web application that calculates the total bill including a tip. It defines a function called calculateTotal that is triggered by a click event.
+
+Inside the calculateTotal function, it retrieves the values of the bill and tip inputs from the HTML document. It then calculates the total bill by multiplying the bill value by the percentage of the tip. The result is stored in the totalValue variable.
+
 */
 
 
