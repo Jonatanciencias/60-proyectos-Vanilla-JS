@@ -11,17 +11,21 @@
   <div class="container">
     <h1>Calculadora de Propinas</h1>
     <p>Introduce el valor de la cuenta y el % de la propina</p>
-    <label for="bill">Cuenta: </label>
-    <input type="number" name="Cuenta" id="bill">
-    <br>
-    <label for="tip">Propina: </label>
-    <input type="number" name="porcentaje" id="tip">
-    <br>
-    <button id="calculate">Calcular</button>
-    <br>
-    <label for="total">Total:</label>
-    <span id="total"></span>
+
+    <div class="containerInput">
+      <label for="bill">Cuenta: </label>
+      <input type="number" name="Cuenta" id="bill">
+      <br>
+      <label for="tip">Propina: </label>
+      <input type="number" name="porcentaje" id="tip">
+      <br>
+      <button id="calculate">Calcular</button>
+      <br>
+      <label for="total">Total:</label>
+      <span id="total"></span>
+    </div>
+
   </div>
-  <script type= "script" src="index.html"></script>
+  <script src="app.js"></script>
 </body>
 </html>
