@@ -11,6 +11,7 @@ Cornell Note:
       - Get the value of the tip input.
       - Calculate the total multiplying the bill value by porcentage of the tip.
       - Print the total value in the total element (with two decimals)
+      - Add a delay to the printing of the total value.
   - 
 - Questions:
 - Summary:
@@ -22,11 +23,24 @@ const tipInput = document.getElementById('tip');
 const totalEl = document.getElementById('total');
 
 btnEl.addEventListener('click',  calculateTotal => {
-  // console.log('Calculating...');
   const billValue = billInput.value;
   const tipValue = tipInput.value;
   const totalValue = billValue * (1 +  (tipValue / 100));
-  totalEl.textContent = totalValue.toFixed(2);
+  const text = totalValue.toFixed(2);
+
+  let i = 0;
+  const speed = 100; // velocidad de escritura en milisegundos
+
+  function typeEffect() {
+    if (i < text.length) {
+      totalEl.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeEffect, speed);
+    }
+  }
+
+  totalEl.textContent = '';
+  typeEffect();
 })
 
 
