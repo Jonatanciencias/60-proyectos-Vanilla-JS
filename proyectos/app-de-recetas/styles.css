@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+:root {
+--oscuro-principal: #26428b;
+--claro-principal: #daa520;
+--gris-oscuro: #343434;
+--fondo-oscuro: #010203;
+--fondo-claro: #e5e4e2;
+--resaltar: #fe3c71;
+}
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--fondo-claro);
+}
+
+/* Add your additional CSS styles here */
+
+header {
+  background-color: var(--oscuro-principal);
+  color: var(--fondo-claro);
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-family: 'Caveat', cursive;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem;
+
+
+}
+
+.recipeList {
+  list-style: none;
+}
+
+.recipeItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+
+  border-radius: 1.2rem;
+  background: #e5e4e2;
+  box-shadow:  20px 20px 60px #c3c2c0,
+               -10px -10px 30px #ffffff;
+}
+
+img {
+  border-radius: 1rem;
+  box-shadow: 3px 3px 7px -4px rgba(0,0,0,0.75);
+  object-fit: cover;
+  width: 150px;
+  height: auto
+}
+
+.recipeItem h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 1rem;
+  min-width: 200px;
+}
+
+.recipeItem p {
+  font-size: 0.8rem;
+  padding: 1rem;
+  color: var(--gris-oscuro);
+}
+
+.recipeItem a {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el contenido */
+  justify-content: center; /* Alinea horizontalmente el contenido */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Caveat', cursive;
+  text-align: center;
+  background-color: var(--claro-principal);
+  color: var(--oscuro-principal);
+  height: 3rem;
+  width: 100px;
+  min-width: 70px;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 3px 7px -4px rgba(0,0,0,0.75);
+  line-height: 1rem;
+  padding: 0.5rem;
+}
+
+.recipeItem a:hover {
+  background-color: var(--oscuro-principal);
+  color: var(--fondo-claro);
+}
