@@ -86,7 +86,6 @@ header {
 /* Heading styles */
 h1 {
   margin-right: 0.5rem;
-  margin-left: 5rem;
   font-size: 3rem;
   font-family: 'Caveat', cursive;
 }
@@ -212,6 +211,10 @@ h1 {
     margin: 0.5rem;
     height: 2.2rem;
     width: 80%;
+  }
+
+  #icono {
+    display: none;
   }
 }
 
