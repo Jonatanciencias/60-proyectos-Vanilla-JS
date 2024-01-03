@@ -38,15 +38,20 @@ header {
   width: 100%;
   z-index: 999;
   display: flex;
-  align-items: center;
-
   flex-direction: row;
-
+  justify-content: space-between;
 }
 
 /* Search styles */
 
-#searchInput {
+#leftSide {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+}
+
+#inputSearch {
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem;
@@ -54,15 +59,18 @@ header {
   font-size: 1rem;
   font-weight: 600;
   font-family: 'Caveat', cursive;
-  margin-right: 1rem;
+  background-color: var(--fondo-claro);
+  opacity: 0.8;
+
   margin-left: 0.5rem;
-  width: 15rem;
+  min-width: 10rem;
+  width: 70%;
 }
 
 
 #btnSearch {
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 7rem;
   padding: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
@@ -71,11 +79,17 @@ header {
   display: flex;
   text-align: center;
   align-items: center;
-  background-color: var(--fondo-claro);
-  color: var(--oscuro-principal);
+  background-color: var(--oscuro-principal);
+  color: var(--fondo-oscuro);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   box-shadow: 3px 3px 7px -4px rgba(0,0,0,0.75);
+  margin-left: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #btnSearch:hover {
@@ -83,9 +97,16 @@ header {
   color: var(--fondo-claro);
 }
 
+#rightSide {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
 /* Heading styles */
 h1 {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
   font-size: 3rem;
   font-family: 'Caveat', cursive;
 }
@@ -95,6 +116,7 @@ h1 {
   top: 0;
   left: 0;
   width: 60px;
+  opacity: 0.6;
 }
 
 
@@ -130,6 +152,11 @@ h1 {
   object-fit: cover;
   width: 150px;
   height: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.recipeItem img:hover {
+  transform: scale(1.1);
 }
 
 /* Recipe item heading styles */
@@ -142,6 +169,17 @@ h1 {
 }
 
 /* Recipe item paragraph styles */
+/* ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  padding: 1rem;
+  color: var(--gris-oscuro);
+} */
+
 .recipeItem p {
   font-size: 0.8rem;
   padding: 1rem;
@@ -216,5 +254,13 @@ h1 {
   #icono {
     display: none;
   }
+}
+
+@media screen and (max-width: 400px) {
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  
 }
 
