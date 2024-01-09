@@ -34,14 +34,18 @@ let emptySquares; // array con las posiciones vacías del tablero para generar l
 let moveInterval; // intervalo de tiempo para mover la serpiente
 
 
-// Función para crear el tablero
+// Función para crear el tablero que no toma ningun parametro
 const createBoard = () => {
+  // Iterar el array boardSquares por cada row  
   boardSquares.forEach((row, rowIndex) => {
+    //Iterar cada elemento dentro de la row
     row.forEach((column, columnIndex) => {
       const squareValue = `${rowIndex}${columnIndex}`;
       const squareElement = document.createElement('div');
       squareElement.setAttribute('class', 'square emptySquare');
       squareElement.setAttribute('id', squareValue);
+      board.appendChild(squareElement);
+      emptySquares.push(squareValue);
 
     })
   })
