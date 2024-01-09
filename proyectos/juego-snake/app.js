@@ -36,7 +36,15 @@ let moveInterval; // intervalo de tiempo para mover la serpiente
 
 // Función para crear el tablero
 const createBoard = () => {
+  boardSquares.forEach((row, rowIndex) => {
+    row.forEach((column, columnIndex) => {
+      const squareValue = `${rowIndex}${columnIndex}`;
+      const squareElement = document.createElement('div');
+      squareElement.setAttribute('class', 'square emptySquare');
+      squareElement.setAttribute('id', squareValue);
 
+    })
+  })
 };
 
 
@@ -55,7 +63,7 @@ const setGame = () => {
   emptySquares = [];
   // se genera el tablero con la función createBoard
   createBoard();
-  console.log(boardSquares);
+  //console.log(boardSquares);
 };
 
 // Funcion para setear el juego (darle valores a las variables del juego)
