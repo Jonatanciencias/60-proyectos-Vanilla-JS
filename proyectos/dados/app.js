@@ -42,3 +42,5 @@ Cornell Note:
     - HistoryList function to save the history of the dice rolls and update the roll-history element.
     - updateRollHistory function to update the history of the dice rolls.
 */ 
+
+const rollButton = document.getElementById('roll-button');
