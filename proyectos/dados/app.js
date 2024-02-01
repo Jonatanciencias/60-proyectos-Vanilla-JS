@@ -7,14 +7,32 @@ Cornell Note:
     - bring the dice element
     - add th animation class to the dice element
     - add a setTimeout function to remove the animation class after 1 second
+    - bring the roll-history element
 
-  - function to generate a random number between 1 and 6 and round it
+  - function (rollDice) to generate a random number between 1 and 6 and round it
     - call the function to change the image of the dice element
     - change the innerHTML of the dice element to the new image.
 
-  - function to change the image of the dice element
-    - create a switch statement to change the image of the dice element depending on the random number generated
+  - function (getDiceFace) to change the image of the dice element
+    - create a switch statement to change the image of the dice element depending on the random number generated.
+  - Change the innerHTML of the dice element to the new image.(inside the rollDice function)
+
+  - Create a variable (HistoryLIst) with an empty array for the history of the dice rolls
+  - push the new dice roll to the HistoryList array with the rollResult
+  - call the function (updateRollHistory) to update the history of the dice rolls
+
+  - create a function (updateRollHistory) to update the history of the dice rolls
+    - empty the innerHTML of the roll-history element
+    - create a for loop to iterate over the HistoryList array
+      - create a new li element (const listItem)
+      - add the rollResult to the innerHTML in a new li element with backticks
+        - create a getDiceFace functio that takes the historyList[i] as an argument
+      - append the new li element to the roll-history element
+      - appendChild the listItem to the roll-history element
+      - comment the roll-history original elements in the html file
+    
 - Questions:
   - How to create a function inside the addEventListener method?
+  - How to use backticks to create a string with a variable inside?
 - Summary:
 */ 
