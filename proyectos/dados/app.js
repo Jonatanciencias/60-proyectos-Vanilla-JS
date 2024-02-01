@@ -15,13 +15,14 @@ Cornell Note:
 
   - function (getDiceFace) to change the image of the dice element
     - create a switch statement to change the image of the dice element depending on the random number generated.
+    
   - Change the innerHTML of the dice element to the new image.(inside the rollDice function)
 
   - Create a variable (HistoryLIst) with an empty array for the history of the dice rolls
   - push the new dice roll to the HistoryList array with the rollResult
   - call the function (updateRollHistory) to update the history of the dice rolls
 
-  - create a function (updateRollHistory) to update the history of the dice rolls
+  - function (updateRollHistory) to update the history of the dice rolls
     - empty the innerHTML of the roll-history element
     - create a for loop to iterate over the HistoryList array
       - create a new li element (const listItem)
@@ -35,4 +36,9 @@ Cornell Note:
   - How to create a function inside the addEventListener method?
   - How to use backticks to create a string with a variable inside?
 - Summary:
+  - we must bring all the elements that we are going to use in the app.js file and after that, we can create three principal functions to make the app work.
+    - rollDice function to generate a random number between 1 and 6 and change the image of the dice element.
+    - getDiceFace function to change the image of the dice element depending on the random number generated.
+    - HistoryList function to save the history of the dice rolls and update the roll-history element.
+    - updateRollHistory function to update the history of the dice rolls.
 */ 
