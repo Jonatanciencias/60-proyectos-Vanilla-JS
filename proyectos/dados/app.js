@@ -2,11 +2,12 @@
 Cornell Note:
 - Notes: 
   - bring the the roll-button
-  - add the event listener to the roll-button
-    - create the function that will be executed when the roll-button is clicked inside the addEventListener method
-    - bring the dice element
-    - add th animation class to the dice element
-    - add a setTimeout function to remove the animation class after 1 second
+  - addEventListener to the roll-button
+    - create the unname function that will be executed when the roll-button is clicked inside the addEventListener method
+  - bring the dice element
+  - add the animation class to the dice element in css
+    - create setTimeout method 
+      - add a unname function that will remove the animation class from the dice element after 1 second
     - bring the roll-history element
 
   - function (rollDice) to generate a random number between 1 and 6 and round it
@@ -44,3 +45,12 @@ Cornell Note:
 */ 
 
 const rollButton = document.getElementById('roll-button');
+
+const diceEl = document.getElementById ('dice');
+
+rollButton.addEventListener('click', function() {
+  diceEl. classList.add('roll-animation');
+  setTimeout(function() {
+    diceEl.classList.remove('roll-animation');
+  }, 1000);
+});
