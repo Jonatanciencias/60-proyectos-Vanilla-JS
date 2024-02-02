@@ -8,14 +8,16 @@ Cornell Note:
   - add the animation class to the dice element in css
     - create setTimeout method 
       - add a unname function that will remove the animation class from the dice element after 1 second
-    - bring the roll-history element
+      - call the rollDice function inside the setTimeout method
+  - bring the roll-history element
 
   - function (rollDice) to generate a random number between 1 and 6 and round it
-    - call the function to change the image of the dice element
+    - create a const (rollResult) to generate a random number between 1 and 6 and round it
+    - call the function (getDiceFace) to change the image of the dice element
     - change the innerHTML of the dice element to the new image.
 
   - function (getDiceFace) to change the image of the dice element
-    - create a switch statement to change the image of the dice element depending on the random number generated.
+    - create a switch with 6 statement to change the image of the dice element depending on the random number generated.
     
   - Change the innerHTML of the dice element to the new image.(inside the rollDice function)
 
@@ -36,6 +38,8 @@ Cornell Note:
 - Questions:
   - How to create a function inside the addEventListener method?
   - How to use backticks to create a string with a variable inside?
+  - how works animation in css with keyframes?
+
 - Summary:
   - we must bring all the elements that we are going to use in the app.js file and after that, we can create three principal functions to make the app work.
     - rollDice function to generate a random number between 1 and 6 and change the image of the dice element.
@@ -44,13 +48,49 @@ Cornell Note:
     - updateRollHistory function to update the history of the dice rolls.
 */ 
 
-const rollButton = document.getElementById('roll-button');
+const rollButton = document.getElementById("roll-button");
 
-const diceEl = document.getElementById ('dice');
+const diceEl = document.getElementById ("dice");
 
-rollButton.addEventListener('click', function() {
-  diceEl. classList.add('roll-animation');
-  setTimeout(function() {
-    diceEl.classList.remove('roll-animation');
+const rollHistory = document.getElementById("roll-history");
+
+
+rollButton.addEventListener("click", () => {
+  diceEl.classList.add("roll-animation");
+  setTimeout(() => {
+    diceEl.classList.remove("roll-animation");
+    rollDice()
   }, 1000);
 });
+
+
+function rollDice() {
+  const rollResult = Math.floor(Math.random() * 6) + 1;
+  const diceFace = getDiceFace(rollResult);
+  diceEl.innerHTML = diceFace;
+}
+
+
+function getDiceFace(rollResult) {
+  switch (rollResult) {
+    case 1:
+      return "&#9856;";
+    case 2:
+      return "&#9857;";
+    case 3:
+      return "&#9858;";
+    case 4:
+      return "&#9859;";
+    case 5:
+      return "&#9860;";
+    case 6:
+      return "&#9861;";
+    default:
+      return " ";
+  }
+
+}
+
+
+
+
