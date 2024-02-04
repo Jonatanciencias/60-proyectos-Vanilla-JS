@@ -3,7 +3,7 @@
 - [x] 1. Calculadora de edad.
 - [x] 2. Calculadora de propinas.
 - [x] 3. App de recetas
-- [x] 4. Dados
+- [x] 4. Dado aleatorio
 
 ### Recursos
 
