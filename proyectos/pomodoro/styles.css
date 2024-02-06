@@ -1,0 +1,14 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+--oscuro-principal: #26428b;
+--claro-principal: #daa520;
+--gris-oscuro: #343434;
+--fondo-oscuro: #010203;
+--fondo-claro: #e5e4e2;
+--resaltar: #fe3c71;
+}
