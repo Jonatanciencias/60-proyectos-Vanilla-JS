@@ -71,6 +71,11 @@ button {
   margin-bottom: 0.5rem;
   font-family: Oswald, sans-serif;
   min-width: 4rem;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
 
 #start {
