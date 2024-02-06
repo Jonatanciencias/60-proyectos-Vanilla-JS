@@ -12,3 +12,77 @@ box-sizing: border-box;
 --fondo-claro: #e5e4e2;
 --resaltar: #fe3c71;
 }
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: Oswald, sans-serif;
+}
+
+.container { 
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  background-color: var(--fondo-claro);
+  align-items: center;
+  justify-content: center;
+  min-width: 350px;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--fondo-oscuro);
+  margin-bottom: 1rem;
+}
+
+.timer {
+  font-size: 3rem;
+  color: var(--oscuro-principal);
+  margin-bottom: 1rem;
+  text-shadow: 3px 1px 5px var(--gris-oscuro);
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin-top: 1rem;
+  background-color: var(--gris-oscuro);
+  border-radius: 1rem;
+  box-shadow: 3px 1px 5px var(--fondo-oscuro);
+}
+
+button {
+  padding: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: Oswald, sans-serif;
+  min-width: 4rem;
+}
+
+#start {
+  background-color: var(--oscuro-principal);
+  color: var(--fondo-claro);
+}
+
+#stop {
+  background-color: var(--resaltar);
+}
+
+#reset {
+  background-color: var(--claro-principal);
+
+}
