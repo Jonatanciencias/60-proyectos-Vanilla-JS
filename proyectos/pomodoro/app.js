@@ -42,3 +42,12 @@ Cornell Note:
 - Questions:
 - Summary:
 */
+
+const startBtn = document.getElementById('start');
+
+const stopBtn = document.getElementById('stop');
+
+const resetBtn = document.getElementById('reset');
+
+const timerEl = document.getElementById('timer');
+
