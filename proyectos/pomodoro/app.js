@@ -13,6 +13,8 @@ Cornell Note:
     - create a variable to store the minutes (math.floor(timeLeft/ 60)
     - create a variable to store the seconds (timeLeft % 60)
     - create a variable to store the formatedTime (minutes + ':' + seconds)
+    - transform the formatedTime to a template string with the backticks
+    - convert minutes and seconds to two digits with the padStart method
 
     - modify the timerEl text to display the formatedTime
 
@@ -20,9 +22,18 @@ Cornell Note:
     - set interval with setInterval function 
     - decrement timeLeft by 1
     - call updateTimer every second
+    - if timeLeft is equal to 0:
+      - clear interval
+      - make an alert
+      - reset timeLeft to 1500
 
   - create stopTimer function
+    - clear interval
+
   - create resetTimer function
+    - clear interval
+    - set timeLeft to 1500
+    - call updateTimer
 
   - add event listener to start button and call startTimer function
   - add event listener to stop button and call stopTimer function
