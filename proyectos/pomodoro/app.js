@@ -40,49 +40,58 @@ Cornell Note:
   - add event listener to reset button and call resetTimer function
   
 - Questions:
+  - What is the purpose of the padStart method?
+  - What is the purpose of the clearInterval method?
+  - What is the purpose of the setInterval method?
 - Summary:
 */
 
-const startBtn = document.getElementById('start');
-const stopBtn = document.getElementById('stop');
-const resetBtn = document.getElementById('reset');
-const timerEl = document.getElementById('timer');
+// Obtener elementos del DOM
+const startBtn = document.getElementById('start'); // Botón de inicio
+const stopBtn = document.getElementById('stop'); // Botón de detener
+const resetBtn = document.getElementById('reset'); // Botón de reinicio
+const timerEl = document.getElementById('timer'); // Elemento de visualización del temporizador
 
+// Variables
+let interval; // Variable para almacenar el intervalo
+let timeLeft = 1500; // Tiempo restante en segundos (1500 segundos = 25 minutos)
 
-let interval;
-let timeLeft = 1500;
-
+// Función para actualizar el temporizador
 function updateTimer() {
-  let minutes = Math.floor(timeLeft / 60);
-  let seconds = timeLeft % 60;
-  let formattedTime = `${String(minutes).padStart(2, '0')} : ${String(seconds).padStart(2, '0')}`;
+  let minutes = Math.floor(timeLeft / 60); // Calcular los minutos restantes
+  let seconds = timeLeft % 60; // Calcular los segundos restantes
+  let formattedTime = `${String(minutes).padStart(2, '0')} : ${String(seconds).padStart(2, '0')}`; // Formatear el tiempo en formato MM:SS
 
-  timerEl.textContent = formattedTime;
+  timerEl.textContent = formattedTime; // Actualizar el texto del temporizador en el DOM
 }
 
+// Función para iniciar el temporizador
 function startTimer() {
   interval = setInterval(() => {
-    timeLeft--;
-    updateTimer();
+    timeLeft--; // Decrementar el tiempo restante en 1 segundo
+    updateTimer(); // Actualizar el temporizador en el DOM
     if (timeLeft === 0) {
-      clearInterval(interval);
-      alert("El tiempo ha terminado");
-      timeLeft = 1500;
-      updateTimer();
+      clearInterval(interval); // Detener el intervalo
+      alert("El tiempo ha terminado"); // Mostrar una alerta cuando el tiempo se haya agotado
+      timeLeft = 1500; // Reiniciar el tiempo restante a 1500 segundos (25 minutos)
+      updateTimer(); // Actualizar el temporizador en el DOM
     }
-  }, 1000)
+  }, 1000); // Ejecutar la función cada segundo (1000 milisegundos)
 }
 
+// Función para detener el temporizador
 function stopTimer() {
-  interval = clearInterval(interval);
+  interval = clearInterval(interval); // Detener el intervalo
 }
 
+// Función para reiniciar el temporizador
 function resetTimer() {
-  interval = clearInterval(interval);
-  timeLeft = 1500;
-  updateTimer();
+  interval = clearInterval(interval); // Detener el intervalo
+  timeLeft = 1500; // Reiniciar el tiempo restante a 1500 segundos (25 minutos)
+  updateTimer(); // Actualizar el temporizador en el DOM
 }
 
-startBtn.addEventListener('click', startTimer);
-stopBtn.addEventListener('click', stopTimer);
-resetBtn.addEventListener('click', resetTimer);
+// Agregar event listeners a los botones
+startBtn.addEventListener('click', startTimer); // Iniciar el temporizador al hacer clic en el botón de inicio
+stopBtn.addEventListener('click', stopTimer); // Detener el temporizador al hacer clic en el botón de detener
+resetBtn.addEventListener('click', resetTimer); // Reiniciar el temporizador al hacer clic en el botón de reinicio
