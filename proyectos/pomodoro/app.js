@@ -44,10 +44,45 @@ Cornell Note:
 */
 
 const startBtn = document.getElementById('start');
-
 const stopBtn = document.getElementById('stop');
-
 const resetBtn = document.getElementById('reset');
-
 const timerEl = document.getElementById('timer');
 
+
+let interval;
+let timeLeft = 1500;
+
+function updateTimer() {
+  let minutes = Math.floor(timeLeft / 60);
+  let seconds = timeLeft % 60;
+  let formattedTime = `${String(minutes).padStart(2, '0')} : ${String(seconds).padStart(2, '0')}`;
+
+  timerEl.textContent = formattedTime;
+}
+
+function startTimer() {
+  interval = setInterval(() => {
+    timeLeft--;
+    updateTimer();
+    if (timeLeft === 0) {
+      clearInterval(interval);
+      alert("El tiempo ha terminado");
+      timeLeft = 1500;
+      updateTimer();
+    }
+  }, 1000)
+}
+
+function stopTimer() {
+  interval = clearInterval(interval);
+}
+
+function resetTimer() {
+  interval = clearInterval(interval);
+  timeLeft = 1500;
+  updateTimer();
+}
+
+startBtn.addEventListener('click', startTimer);
+stopBtn.addEventListener('click', stopTimer);
+resetBtn.addEventListener('click', resetTimer);
